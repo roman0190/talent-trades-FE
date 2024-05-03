@@ -1,6 +1,16 @@
+import AuthLayout from "./Auth/layout";
+import SignIn from "./Auth/signIn/page";
 
-export default function Home() {
+export default function Main() {
   return (
-    <div> Main </div>
+    <div>
+      <AuthLayout
+        children={
+          <div>
+            <SignIn />
+          </div>
+        }
+      />
+    </div>
   );
 }
