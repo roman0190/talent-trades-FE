@@ -13,7 +13,7 @@ export default function SignIn() {
       return;
     }
     try {
-      const response = await axios.post('http://localhost:4000/admin/login', {
+      const response = await axios.post('http://localhost:4000/admin/login',{
         email,
         password,
       });
@@ -27,6 +27,7 @@ export default function SignIn() {
         setError('Login failed');
       }
     } catch (error) {
+      console.log("this is ",error)
       setError('Invalid User');
     }
   };

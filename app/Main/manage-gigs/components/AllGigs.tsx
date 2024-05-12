@@ -1,9 +1,8 @@
 "use client";
 import Searchbar from "@/app/components/searchbar";
 import axios from "axios";
-import Link from "next/link";
 import React, { useState } from "react";
-import DeleteConfirmationGig from "./DeleteConfirmationGig";
+import DeleteConfirmationPost from "@/app/components/DeleteConfirmationPost";
 
 const AllGigs = ({ initialData }: any) => {
   const [inputValue, setInputValue] = useState("");
@@ -11,6 +10,7 @@ const AllGigs = ({ initialData }: any) => {
   const [searchPerformed, setSearchPerformed] = useState(false);
   const [showModal, setShowModal] = useState<boolean>(false);
   const [itemId, setitemId] = useState("");
+  const [showtag,setTag] = useState<boolean>(true);
 
   const handleChange = (e) => {
     setInputValue(e.target.value);
@@ -54,9 +54,9 @@ const AllGigs = ({ initialData }: any) => {
 
   return (
     <>
-        <div className="flex col-span-4 text-gray-600 font-bold bg-gradient-to-r from-red-400 to-red-200">
+      {showtag && (  <div className="flex col-span-4 text-gray-600 font-bold bg-gradient-to-r from-red-400 to-red-200">
           <p  className="flex-auto w-64">Unapproved Gigs</p>
-          <button className="focus:outline-none">
+          <button className="focus:outline-none" onClick = {()=> {setTag(false)}} >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-6 w-6 text-red-600"
@@ -72,7 +72,7 @@ const AllGigs = ({ initialData }: any) => {
               />
             </svg>
         </button>
-        </div>
+        </div>)}
     <div className="w-full h-full gap-5 flex flex-col items-center  ">
       <Searchbar
         handleClick={handleClick}
@@ -136,7 +136,7 @@ const AllGigs = ({ initialData }: any) => {
               </section>
             </div>
           ))}
-        <DeleteConfirmationGig
+        <DeleteConfirmationPost
           showModal={showModal}
           setShowModal={setShowModal}
           handleDelete={handleDelete}

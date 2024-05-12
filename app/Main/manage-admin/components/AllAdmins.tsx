@@ -7,12 +7,20 @@ const AllAdmins = ({ initialData }: any) => {
   const [inputValue, setInputValue] = useState("");
   const [data, setData] = useState(initialData);
   const [searchPerformed, setSearchPerformed] = useState(false);
+  const name = localStorage.getItem('name');
+
+  function formatDate(dateString) {
+    const date = new Date(dateString);
+    const options = { year: 'numeric', month: 'long', day: 'numeric' };
+    return date.toLocaleDateString('en-US', options);
+  }
+
   const handleChange = (e) => {
     setInputValue(e.target.value);
     setData(initialData);
   };
 
-  const handleClick = async () => {
+  const handleSearch = async () => {
     try {
       const response = await axios.get(
         `http://localhost:4000/admin/search/${inputValue}`
@@ -29,11 +37,12 @@ const AllAdmins = ({ initialData }: any) => {
     window.location.href = `/Main/manage-admin/view-admin-profile/${userId}`;
     
   };
+  
 
   return (
     <div className="w-full h-full gap-5 flex flex-col items-center  ">
       <Searchbar
-        handleClick={handleClick}
+        handleClick={handleSearch}
         inputValue={inputValue}
         setInputValue={setInputValue}
         handleChange={handleChange}
@@ -44,7 +53,10 @@ const AllAdmins = ({ initialData }: any) => {
           <div className="text-red-500">No user found</div>
         )}
         {data &&
-          data.map((item: any, index: any) => (
+          data
+          .filter(item => !(name && name === item.name))
+          .sort((a, b) => new Date(b.date) - new Date(a.date))
+          .map((item: any, index: any) => (
             <div key={index} className="my-1 p-1">
               <section className="text-gray-400 body-font">
                 <div >
@@ -87,7 +99,7 @@ const AllAdmins = ({ initialData }: any) => {
                             <td className="px-2 py-2 text-gray-500 font-semibold">
                                 Joined Date
                               </td>
-                              <td className="px-2 py-2">{item.date ? item.date.split('T')[0] : 'N/A'}</td>
+                              <td className="px-2 py-2">{formatDate(item.date)}</td>
                             </tr>
                           </tbody>
                         </table>
