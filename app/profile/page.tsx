@@ -116,17 +116,17 @@ export default function Profile() {
           <h1 className="text-3xl font-semibold mb-4">Admin Profile</h1>
           <div className="bg-white p-8 rounded-lg shadow-md">
             <div className="flex justify-center items-center ">
-              <div className="relative">
+              <div className="relative w-32 h-32">
                 {previewImage ? (
                   <img
                     src={previewImage}
                     alt="Preview"
-                    className="h-36 w-36 rounded-full"
+                    className="h-full w-full object-cover rounded-full"
                   />
                 ) : (
-                  <div>
+                  <div className="h-full w-full">
                     <img
-                      className="w-32 h-32 rounded-full mx-auto cursor-pointer"
+                      className="w-full h-full object-cover rounded-full mx-auto cursor-pointer"
                       src={"http://localhost:4000/admin/profilePic/" + path}
                       alt="Profile Picture"
                       onClick={() => setModalOpen(true)}
@@ -138,7 +138,7 @@ export default function Profile() {
                       >
                         <div className="bg-white rounded-lg p-4">
                           <img
-                            className="w-full h-full"
+                            className="w-100 h-100"
                             src={
                               "http://localhost:4000/admin/profilePic/" + path
                             }

@@ -59,6 +59,7 @@ export default function SignIn() {
         </button>
         {error && <p className="text-red-500 mt-2 text-center">{error}</p>}
       </div>
+      <span className = "mt-10">Don't have an account? <a className="text-blue-600 underline" href="/Auth/signUp/">SignUp</a></span>
     </div>
   </div>
   );

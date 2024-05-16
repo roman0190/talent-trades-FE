@@ -1,11 +1,11 @@
 {
-  "/not-found": "app/not-found.js",
   "/profile/page": "app/profile/page.js",
-  "/Auth/signIn/page": "app/Auth/signIn/page.js",
-  "/Main/manage-gigs/page": "app/Main/manage-gigs/page.js",
-  "/Auth/signUp/page": "app/Auth/signUp/page.js",
+  "/not-found": "app/not-found.js",
   "/Main/dashboard/page": "app/Main/dashboard/page.js",
+  "/Main/manage-admin/view-admin-profile/[id]/page": "app/Main/manage-admin/view-admin-profile/[id]/page.js",
+  "/Main/manage-announcement/page": "app/Main/manage-announcement/page.js",
+  "/Main/manage-gigs/page": "app/Main/manage-gigs/page.js",
   "/Main/manage-admin/page": "app/Main/manage-admin/page.js",
-  "/Main/manage-users/page": "app/Main/manage-users/page.js",
-  "/Main/manage-announcement/page": "app/Main/manage-announcement/page.js"
+  "/Auth/signIn/page": "app/Auth/signIn/page.js",
+  "/Main/manage-users/page": "app/Main/manage-users/page.js"
 }

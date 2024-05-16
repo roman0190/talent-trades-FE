@@ -5,12 +5,6 @@
       "static/chunks/main-app.js",
       "static/chunks/app/page.js"
     ],
-    "/layout": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/layout.css",
-      "static/chunks/app/layout.js"
-    ],
     "/loading": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
@@ -20,6 +14,27 @@
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/not-found.js"
+    ],
+    "/layout": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/layout.css",
+      "static/chunks/app/layout.js"
+    ],
+    "/Auth/signUp/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/Auth/signUp/page.js"
+    ],
+    "/Auth/layout": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/Auth/layout.js"
+    ],
+    "/Auth/signIn/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/Auth/signIn/page.js"
     ],
     "/profile/page": [
       "static/chunks/webpack.js",
@@ -41,40 +56,30 @@
       "static/chunks/main-app.js",
       "static/chunks/app/Main/manage-admin/page.js"
     ],
+    "/Main/manage-admin/view-admin-profile/[id]/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/Main/manage-admin/view-admin-profile/[id]/page.js"
+    ],
     "/Main/manage-users/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/Main/manage-users/page.js"
-    ],
-    "/Main/manage-gigs/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/Main/manage-gigs/page.js"
     ],
     "/Main/manage-announcement/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/Main/manage-announcement/page.js"
     ],
-    "/Main/manage-admin/view-admin-profile/[id]/page": [
+    "/Main/manage-gigs/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/Main/manage-admin/view-admin-profile/[id]/page.js"
+      "static/chunks/app/Main/manage-gigs/page.js"
     ],
-    "/Auth/signIn/page": [
+    "/aboutus/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/Auth/signIn/page.js"
-    ],
-    "/Auth/layout": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/Auth/layout.js"
-    ],
-    "/Auth/signUp/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/Auth/signUp/page.js"
+      "static/chunks/app/aboutus/page.js"
     ]
   }
 }

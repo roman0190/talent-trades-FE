@@ -48,7 +48,7 @@ const AllAdmins = ({ initialData }: any) => {
         handleChange={handleChange}
       />
 
-      <div className=" w-full grid grid-cols-4 gap-3">
+    <div className="w-full grid grid-cols-1 sm:grid-cols-4 md:grid-cols-4 lg:grid-cols-4 gap-3">
       {searchPerformed && data === null && (
           <div className="text-red-500">No user found</div>
         )}
@@ -64,7 +64,7 @@ const AllAdmins = ({ initialData }: any) => {
                     <div className="bg-white/10 shadow-xl rounded-lg py-3">
                       <div className="photo-wrapper p-2">
                         <img
-                          className="w-32 h-32 rounded-full mx-auto"
+                          className="w-32 h-32 rounded-full object-cover mx-auto"
                           src={
                             "http://localhost:4000/admin/profilePic/" +
                             item.path

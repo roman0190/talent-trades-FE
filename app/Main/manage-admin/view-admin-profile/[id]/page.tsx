@@ -49,7 +49,7 @@ const ViewAdminProfile = ({ params }: { params: { id: string } }) => {
                 <span className="absolute right-0 m-3 h-3 w-3 rounded-full bg-green-500 ring-2 ring-green-300 ring-offset-2"></span>
 
                 <img
-                  className="w-32 h-32 rounded-full mx-auto cursor-pointer"
+                  className="w-32 h-32 rounded-full object-cover mx-auto cursor-pointer"
                   src={"http://localhost:4000/admin/profilePic/" + profile.path}
                   alt="Profile Picture"
                   onClick={() => setModalOpen(true)}

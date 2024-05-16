@@ -109,7 +109,10 @@ const AllGigs = ({ initialData }: any) => {
                             {item.description}
                           </p>
                           <p className="text-gray-600 font-medium mb-3">
-                            Category: {item.category}
+                            Price: <b>200$</b>
+                          </p>
+                          <p className="text-gray-600 font-medium mb-3">
+                            Category: <b>{item.category}</b>
                           </p>
                           <div className="flex items-center flex-wrap">
                             <button

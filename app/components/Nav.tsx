@@ -38,10 +38,10 @@ function Nav() {
             <div>
                 <div className="flex items-center justify-between h-16">
                     <div className="flex items-center">
-                        <div className="flex-shrink-0">
+                        <div className="flex-shrink-0 ">
                             <Link href="/profile">
                                 <span className="flex items-center">
-                                    <img className="h-8 w-8 rounded-full" src={"http://localhost:4000/admin/profilePic/"+file} alt="Profile Picture" />
+                                    <img className="h-8 w-8 object-cover rounded-full" src={"http://localhost:4000/admin/profilePic/"+file} alt="Profile Picture" />
                                     <span className="ml-2 text-white">{name}</span>
                                 </span>
                             </Link>
